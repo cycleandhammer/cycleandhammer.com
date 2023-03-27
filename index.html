@@ -23,11 +23,27 @@
       max-width: 100%;
       width: 700px;
     }
+    .logo--dark {
+        display: none;
+    }
+    @media (prefers-color-scheme: dark) {
+      html,
+      body {
+        background-color: #202227;
+      }
+      .logo--light {
+        display: none;
+      }
+      .logo--dark {
+        display: block;
+      }
+    }
   </style>
 </head>
 <body>
   <div class='center-center'>
-    <img class='logo' src="/cycle-hammer.png" />
+    <img class='logo logo--light' src="/cycle-hammer.svg" />
+    <img class='logo logo--dark' src="/cycle-hammer-dark.svg" />
   </div>
 </body>
 </html>
